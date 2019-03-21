@@ -32,7 +32,7 @@ def notebok(NameAction, timeAction):
     print('Finished 1')
 
 
-def firebase_Test():
+def firebase_Test(event):
     # t = input('Start!\n')
 
 
@@ -45,4 +45,12 @@ def firebase_Test():
     # auth.send_email_verification(user['idToken'])
 
     db = firebase.database()
-    db.child('names').push({'node':'обед'})
+    db.child('names').push({'node':event,'time':datetime.datetime.today().strftime('%d/%m/%Y:%H.%M')})
+    # result = db.child('names').get()
+    dbstr = db.child('names').get().val()
+    # tr = json.loads(db.child('names').get().val().items())
+    keys = dbstr.keys()
+    for key in keys:
+        print(key,dbstr[key])
+
+
