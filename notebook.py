@@ -5,6 +5,7 @@ import datetime
 import pyrebase
 
 from config import email,password,configurate
+from collections import OrderedDict
 
 def notebok(NameAction, timeAction):
     'https://console.firebase.google.com/project/notebook-7304e/database/firestore/data~2Fnodebook~2FAfRFO98EVy2j4JysoDXW'
@@ -35,8 +36,6 @@ def notebok(NameAction, timeAction):
 def firebase_Test(event):
     # t = input('Start!\n')
 
-
-
     firebase = pyrebase.initialize_app(configurate)
     auth = firebase.auth()
     user = auth.sign_in_with_email_and_password(email,password)
@@ -49,8 +48,26 @@ def firebase_Test(event):
     # result = db.child('names').get()
     dbstr = db.child('names').get().val()
     # tr = json.loads(db.child('names').get().val().items())
+
     keys = dbstr.keys()
     for key in keys:
         print(key,dbstr[key])
 
+class NODEBOOK:
+    def __init__(self):
+        self.firebase = pyrebase.initialize_app(configurate)
+        self.auth = self.firebase.auth()
+        self.user = self.auth.sign_in_with_email_and_password(email,password)
+        self.autht = self.auth.get_account_info(self.user['idToken'])
+        print(self.autht)
+        self.db = self.firebase.database()
 
+    def PUSHH_NODE(self,event):
+        self.db.child('names').push({'node':event,'time':datetime.datetime.today().strftime('%d/%m/%Y:%H.%M')})
+
+    def PRINT_NODES(self):
+        dbstr = self.db.child('names').get().val()
+
+        keys = dbstr.keys()
+        for key in keys:
+            print(key,dbstr[key])

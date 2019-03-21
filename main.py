@@ -1,8 +1,15 @@
 from notebook import notebok
+from notebook import NODEBOOK
 from notebook import firebase_Test
 import glob
 
 from acreditationDooD import compil_ot_file
+
+def testClassNodebook():
+    nodebook  = NODEBOOK()
+    nodebook.PUSHH_NODE(event = 'жопник')
+    nodebook.PRINT_NODES()
+
 
 
 def main():
@@ -13,8 +20,10 @@ def main():
     fileOutPDF = 'filePDF.txt'
 
     # notebok('обед',datetime.datetime.today().strftime('%d/%m/%Y:%H/%M'))
+    testClassNodebook()
 
-    firebase_Test(event = 'Ужин')
+
+    # firebase_Test(event = 'Ужин')
 
     # Создать общий выходной файл
     # compil_ot_file(dirName,fileOutAll)
