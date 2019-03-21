@@ -4,4 +4,5 @@ venv/*
 *.xlsx
 *.jpg
 *.txt
+config.py
 __pycache__/*

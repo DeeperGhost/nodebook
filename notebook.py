@@ -4,6 +4,7 @@ import datetime
 
 import pyrebase
 
+from config import email,password,configurate
 
 def notebok(NameAction, timeAction):
     'https://console.firebase.google.com/project/notebook-7304e/database/firestore/data~2Fnodebook~2FAfRFO98EVy2j4JysoDXW'
@@ -33,20 +34,10 @@ def notebok(NameAction, timeAction):
 
 def firebase_Test():
     # t = input('Start!\n')
-    # email = "evgenioseev@gmail.com"
 
-    email = "kareolis8@yandex.ru"
-    password = "return123"
 
-    config = {
-        "apiKey": "AIzaSyCvEFOYGk5UyUXMWyV8TR0yI20RHHyHrec",
-        "authDomain": "notebook-7304e.firebaseapp.com",
-        "databaseURL": "https://notebook-7304e.firebaseio.com",
-        "projectId": "notebook-7304e",
-        "storageBucket": "notebook-7304e.appspot.com",
-        "messagingSenderId": "409747025419"
-    }
-    firebase = pyrebase.initialize_app(config)
+
+    firebase = pyrebase.initialize_app(configurate)
     auth = firebase.auth()
     user = auth.sign_in_with_email_and_password(email,password)
     autht = auth.get_account_info(user['idToken'])
