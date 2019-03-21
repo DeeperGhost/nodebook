@@ -32,27 +32,6 @@ def notebok(NameAction, timeAction):
         json.dump(data, write_file,indent=2, ensure_ascii=False)
     print('Finished 1')
 
-
-def firebase_Test(event):
-    # t = input('Start!\n')
-
-    firebase = pyrebase.initialize_app(configurate)
-    auth = firebase.auth()
-    user = auth.sign_in_with_email_and_password(email,password)
-    autht = auth.get_account_info(user['idToken'])
-    print(autht)
-    # auth.send_email_verification(user['idToken'])
-
-    db = firebase.database()
-    db.child('names').push({'node':event,'time':datetime.datetime.today().strftime('%d/%m/%Y:%H.%M')})
-    # result = db.child('names').get()
-    dbstr = db.child('names').get().val()
-    # tr = json.loads(db.child('names').get().val().items())
-
-    keys = dbstr.keys()
-    for key in keys:
-        print(key,dbstr[key])
-
 class NODEBOOK:
     def __init__(self):
         self.firebase = pyrebase.initialize_app(configurate)
@@ -71,3 +50,26 @@ class NODEBOOK:
         keys = dbstr.keys()
         for key in keys:
             print(key,dbstr[key])
+
+    def BUY_NODE(self):
+        buy = input('Че подбросить?')
+        print(buy + " <- зафиксировано, взято на контроль.")
+
+    def DO_BUY_NODE(self):
+        buy = input('Че Купил Епта?')
+        print(buy + " <- Вычеркнуто, красавчик")
+
+    #Очистить список записей полное обнуление
+    def CLEAR_NODES(self):
+        self.db.child('names').remove(self.user['idToken'])
+
+
+
+
+def testClassNodebook():
+    nodebook  = NODEBOOK()
+    nodebook.PUSHH_NODE(event = 'жопник')
+    nodebook.PRINT_NODES()
+    # nodebook.BUY_NODE()
+    # nodebook.DO_BUY_NODE()
+    # nodebook.CLEAR_NODES()
