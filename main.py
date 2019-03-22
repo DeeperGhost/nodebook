@@ -12,11 +12,11 @@ def main():
     fileOutPDF = 'filePDF.txt'
 
     # notebok('обед',datetime.datetime.today().strftime('%d/%m/%Y:%H/%M'))
-    testClassNodebook()
+    # testClassNodebook()
 
 
     # Создать общий выходной файл
-    # compil_ot_file(dirName,fileOutAll)
+    compil_ot_file(dirName,fileOutAll)
     # Создать выходной файл для PDF директории
     # compil_ot_file(dirToPDF, fileOutPDF)
 
