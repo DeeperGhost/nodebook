@@ -4,7 +4,7 @@ from notebook import testClassNodebook
 import glob
 from acreditationDooD import compil_ot_file
 
-
+from madeRes import CatalogTovar
 import datetime
 def main():
     dirName = 'O:\\БАЗА УП НА АККРЕДИТАЦИЮ/'
@@ -18,8 +18,12 @@ def main():
     # testClassNodebook()
     # работит
 
+    p = CatalogTovar()
+    p.testAddNode()
+
+
     # Создать общий выходной файл
-    compil_ot_file(dirName,fileOutAll)
+    # compil_ot_file(dirName,fileOutAll)
     # Создать выходной файл для PDF директории
     # compil_ot_file(dirToPDF, fileOutPDF)
 
