@@ -15,7 +15,7 @@ def main():
 
     # notebok('обед',datetime.datetime.today().strftime('%d/%m/%Y:%H/%M'))
 
-    testClassNodebook()
+    # testClassNodebook()
     # работит
 
     # Создать общий выходной файл
