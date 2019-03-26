@@ -7,6 +7,8 @@ import pyrebase
 from config import email,password,configurate
 from collections import OrderedDict
 
+
+
 def notebok(NameAction, timeAction):
     'https://console.firebase.google.com/project/notebook-7304e/database/firestore/data~2Fnodebook~2FAfRFO98EVy2j4JysoDXW'
     directoryFile = '//WS03057/selfDataRes'
@@ -40,6 +42,7 @@ class NODEBOOK:
         self.autht = self.auth.get_account_info(self.user['idToken'])
         print(self.autht)
         self.db = self.firebase.database()
+        self.pathDataTovarJson = "DataTovar.json"
 
     def PUSHH_NODE(self,event):
         self.db.child('names').push({'node':event,'time':datetime.datetime.today().strftime('%d/%m/%Y:%H.%M')})
@@ -63,6 +66,17 @@ class NODEBOOK:
     def CLEAR_NODES(self):
         self.db.child('names').remove(self.user['idToken'])
 
+    # Загрузить инфу о возможных товарах из Json
+    def initBase(self):
+
+        with open("dump.json", "r") as read_file:
+            data = json.load(read_file)
+
+        self.db.child('dataProductBase').remove()
+        for i in data:
+            self.db.child('dataProductBase').push(i)
+        print("Загружено")
+
 
 
 
@@ -70,6 +84,7 @@ def testClassNodebook():
     nodebook  = NODEBOOK()
     nodebook.PUSHH_NODE(event = 'жопник')
     nodebook.PRINT_NODES()
+    nodebook.initBase()
     # nodebook.BUY_NODE()
     # nodebook.DO_BUY_NODE()
     # nodebook.CLEAR_NODES()

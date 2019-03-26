@@ -4,6 +4,8 @@ from notebook import testClassNodebook
 import glob
 from acreditationDooD import compil_ot_file
 
+
+import datetime
 def main():
     dirName = 'O:\\БАЗА УП НА АККРЕДИТАЦИЮ/'
     # dirName = 'D:\\up base'
@@ -12,8 +14,9 @@ def main():
     fileOutPDF = 'filePDF.txt'
 
     # notebok('обед',datetime.datetime.today().strftime('%d/%m/%Y:%H/%M'))
-    # testClassNodebook()
 
+    testClassNodebook()
+    # работит
 
     # Создать общий выходной файл
     compil_ot_file(dirName,fileOutAll)
