@@ -18,10 +18,11 @@ class CatalogTovar :
             print('Элемент есть в списке')
         else:
             self.catalog.append(t)
+            print('Успешно добавлено')
 
-
+    # Дампит каталог товаров -> Json
     def testAddNode(self):
-        self.addTovar(section="хищное",name='иичко',value="",dimension='литр')
+        self.addTovar(section="хищное",name='колбаса вареная',value="",dimension='кг')
         with open("dump.json", "w") as write_file:
             json.dump(self.catalog, write_file,indent=2, ensure_ascii=False)
 

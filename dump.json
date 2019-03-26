@@ -58,5 +58,11 @@
     "Name": "иичко",
     "Value": "",
     "Dimension": "литр"
+  },
+  {
+    "Section": "хищное",
+    "Name": "колбаса вареная",
+    "Value": "",
+    "Dimension": "кг"
   }
 ]
