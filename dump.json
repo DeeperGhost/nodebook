@@ -1,68 +1,618 @@
 [
   {
-    "Section": "кисломолочные",
+    "Section": "Кисломолочное",
+    "Name": "Масло сливочное",
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": "с коровкой"
+  },
+  {
+    "Section": "Кисломолочное",
+    "Name": "сметана",
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": "валентиновское"
+  },
+  {
+    "Section": "Кисломолочное",
     "Name": "Молоко",
-    "обьем": "",
-    "размерность": "литр"
+    "Value": "",
+    "Dimension": "л",
+    "Caption": ""
   },
   {
-    "Section": "кисломолочные",
-    "Name": "Сметана",
-    "обьем": "",
-    "размерность": "гр."
-  },
-  {
-    "Section": "кисломолочные",
+    "Section": "Кисломолочное",
     "Name": "Кефир",
-    "обьем": "",
-    "размерность": "литр"
+    "Value": "",
+    "Dimension": "л",
+    "Caption": ""
   },
   {
-    "Section": "кисломолочные",
+    "Section": "Кисломолочное",
     "Name": "Творог",
-    "обьем": "",
-    "размерность": "гр."
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
   },
   {
-    "Section": "кисломолочные",
+    "Section": "Кисломолочное",
     "Name": "Моцарела",
-    "обьем": "",
-    "размерность": "гр."
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
   },
   {
-    "Section": "кисломолочные",
+    "Section": "Кисломолочное",
     "Name": "Пармезан",
-    "обьем": "",
-    "размерность": "гр."
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
   },
   {
-    "Section": "кисломолочные",
+    "Section": "Кисломолочное",
     "Name": "Масдам",
-    "обьем": "",
-    "размерность": "гр."
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
   },
   {
-    "Section": "кисломолочные",
+    "Section": "Кисломолочное",
     "Name": "Сыр",
-    "обьем": "",
-    "размерность": "гр."
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
   },
   {
-    "Section": "кисломолочные",
+    "Section": "Кисломолочное",
     "Name": "Сыр плавленый",
-    "обьем": "",
-    "размерность": "гр."
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
   },
   {
-    "Section": "хищное",
-    "Name": "иичко",
+    "Section": "Хищное",
+    "Name": "Иичко",
     "Value": "",
-    "Dimension": "литр"
+    "Dimension": "шт",
+    "Caption": ""
   },
   {
-    "Section": "хищное",
-    "Name": "колбаса вареная",
+    "Section": "Хищное",
+    "Name": "Колбаса вареная",
     "Value": "",
-    "Dimension": "кг"
+    "Dimension": "гр",
+    "Caption": ""
+  },
+  {
+    "Section": "Хищное",
+    "Name": "колбаса копченая",
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
+  },
+  {
+    "Section": "Хищное",
+    "Name": "Сервелат",
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
+  },
+  {
+    "Section": "Хищное",
+    "Name": "ХК Селедка",
+    "Value": "",
+    "Dimension": "шт",
+    "Caption": ""
+  },
+  {
+    "Section": "Хищное",
+    "Name": "ХК Красная рыб",
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
+  },
+  {
+    "Section": "Хищное",
+    "Name": "ГК красная",
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
+  },
+  {
+    "Section": "Хищное",
+    "Name": "Гк Селедка",
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
+  },
+  {
+    "Section": "Хищное",
+    "Name": "Говядина",
+    "Value": "",
+    "Dimension": "кг",
+    "Caption": ""
+  },
+  {
+    "Section": "Хищное",
+    "Name": "Курятина ",
+    "Value": "",
+    "Dimension": "кг",
+    "Caption": ""
+  },
+  {
+    "Section": "Хищное",
+    "Name": "Свинина",
+    "Value": "",
+    "Dimension": "кг",
+    "Caption": ""
+  },
+  {
+    "Section": "Хищное",
+    "Name": "Красная рыба",
+    "Value": "",
+    "Dimension": "кг",
+    "Caption": ""
+  },
+  {
+    "Section": "Хищное",
+    "Name": "кости бульон",
+    "Value": "",
+    "Dimension": "кг",
+    "Caption": ""
+  },
+  {
+    "Section": "Хищное",
+    "Name": "Тушенка",
+    "Value": "",
+    "Dimension": "шт",
+    "Caption": ""
+  },
+  {
+    "Section": "Хищное",
+    "Name": "Сосиски",
+    "Value": "",
+    "Dimension": "кг",
+    "Caption": ""
+  },
+  {
+    "Section": "Растижопка",
+    "Name": "Масло растительное",
+    "Value": "",
+    "Dimension": "л",
+    "Caption": ""
+  },
+  {
+    "Section": "Растижопка",
+    "Name": "Спагети",
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
+  },
+  {
+    "Section": "Растижопка",
+    "Name": "Макароны",
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
+  },
+  {
+    "Section": "Растижопка",
+    "Name": "Мука",
+    "Value": "",
+    "Dimension": "кг",
+    "Caption": ""
+  },
+  {
+    "Section": "Растижопка",
+    "Name": "Хлебушек",
+    "Value": "",
+    "Dimension": "шт",
+    "Caption": ""
+  },
+  {
+    "Section": "Растижопка",
+    "Name": "Печеньки",
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
+  },
+  {
+    "Section": "Растижопка",
+    "Name": "Конфеты",
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
+  },
+  {
+    "Section": "Растижопка",
+    "Name": "мармелад",
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
+  },
+  {
+    "Section": "Растижопка",
+    "Name": "Булошки",
+    "Value": "",
+    "Dimension": "шт",
+    "Caption": ""
+  },
+  {
+    "Section": "Растижопка",
+    "Name": "Сахар",
+    "Value": "",
+    "Dimension": "кг",
+    "Caption": ""
+  },
+  {
+    "Section": "Растижопка",
+    "Name": "Мёд",
+    "Value": "",
+    "Dimension": "кг",
+    "Caption": ""
+  },
+  {
+    "Section": "Растижопка",
+    "Name": "Тесто слоеное",
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
+  },
+  {
+    "Section": "Растижопка",
+    "Name": "Тесто дрозжевое",
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
+  },
+  {
+    "Section": "Трава",
+    "Name": "Укроп",
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
+  },
+  {
+    "Section": "Трава",
+    "Name": "Петрушка",
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
+  },
+  {
+    "Section": "Трава",
+    "Name": "Лук перо",
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
+  },
+  {
+    "Section": "Трава",
+    "Name": "Лук репка",
+    "Value": "",
+    "Dimension": "кг",
+    "Caption": ""
+  },
+  {
+    "Section": "Трава",
+    "Name": "Чеснок стрела",
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
+  },
+  {
+    "Section": "Трава",
+    "Name": "Чеснок",
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
+  },
+  {
+    "Section": "Трава",
+    "Name": "Свекла",
+    "Value": "",
+    "Dimension": "кг",
+    "Caption": ""
+  },
+  {
+    "Section": "Трава",
+    "Name": "Картофан",
+    "Value": "",
+    "Dimension": "кг",
+    "Caption": ""
+  },
+  {
+    "Section": "Трава",
+    "Name": "имбирь",
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
+  },
+  {
+    "Section": "Трава",
+    "Name": "помидор ",
+    "Value": "",
+    "Dimension": "кг",
+    "Caption": ""
+  },
+  {
+    "Section": "Трава",
+    "Name": "Помидор чери",
+    "Value": "",
+    "Dimension": "кг",
+    "Caption": ""
+  },
+  {
+    "Section": "Трава",
+    "Name": "Помидор желтый",
+    "Value": "",
+    "Dimension": "кг",
+    "Caption": ""
+  },
+  {
+    "Section": "Трава",
+    "Name": "огурец",
+    "Value": "",
+    "Dimension": "кг",
+    "Caption": ""
+  },
+  {
+    "Section": "Трава",
+    "Name": "кабачек",
+    "Value": "",
+    "Dimension": "шт",
+    "Caption": ""
+  },
+  {
+    "Section": "Фруктовые",
+    "Name": "Банана",
+    "Value": "",
+    "Dimension": "шт",
+    "Caption": ""
+  },
+  {
+    "Section": "Фруктовые",
+    "Name": "Апельсина",
+    "Value": "",
+    "Dimension": "шт",
+    "Caption": ""
+  },
+  {
+    "Section": "Фруктовые",
+    "Name": "Мандарина",
+    "Value": "",
+    "Dimension": "кг",
+    "Caption": ""
+  },
+  {
+    "Section": "Фруктовые",
+    "Name": "Лимона",
+    "Value": "",
+    "Dimension": "шт",
+    "Caption": ""
+  },
+  {
+    "Section": "Фруктовые",
+    "Name": "Ананса",
+    "Value": "",
+    "Dimension": "шт",
+    "Caption": ""
+  },
+  {
+    "Section": "Фруктовые",
+    "Name": "Арбуз",
+    "Value": "",
+    "Dimension": "шт",
+    "Caption": ""
+  },
+  {
+    "Section": "Фруктовые",
+    "Name": "Дыня",
+    "Value": "",
+    "Dimension": "шт",
+    "Caption": ""
+  },
+  {
+    "Section": "Фруктовые",
+    "Name": "Виноград",
+    "Value": "",
+    "Dimension": "кг",
+    "Caption": ""
+  },
+  {
+    "Section": "Фруктовые",
+    "Name": "Яблоко",
+    "Value": "",
+    "Dimension": "кг",
+    "Caption": ""
+  },
+  {
+    "Section": "Фруктовые",
+    "Name": "Груша",
+    "Value": "",
+    "Dimension": "кг",
+    "Caption": ""
+  },
+  {
+    "Section": "Фруктовые",
+    "Name": "Финик",
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
+  },
+  {
+    "Section": "Фруктовые",
+    "Name": "ореха",
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
+  },
+  {
+    "Section": "Фруктовые",
+    "Name": "Курага",
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
+  },
+  {
+    "Section": "Химоза",
+    "Name": "Порошек стиральный",
+    "Value": "",
+    "Dimension": "кг",
+    "Caption": "таид, персил"
+  },
+  {
+    "Section": "Химоза",
+    "Name": "кондиционер стиральный",
+    "Value": "",
+    "Dimension": "л",
+    "Caption": ""
+  },
+  {
+    "Section": "Химоза",
+    "Name": "Зубная паста",
+    "Value": "",
+    "Dimension": "шт",
+    "Caption": ""
+  },
+  {
+    "Section": "Химоза",
+    "Name": "Мыло",
+    "Value": "",
+    "Dimension": "шт",
+    "Caption": ""
+  },
+  {
+    "Section": "Химоза",
+    "Name": "Мыло жидкое",
+    "Value": "",
+    "Dimension": "л",
+    "Caption": ""
+  },
+  {
+    "Section": "Химоза",
+    "Name": "Шампунь",
+    "Value": "",
+    "Dimension": "л",
+    "Caption": ""
+  },
+  {
+    "Section": "Химоза",
+    "Name": "пакет мусорный",
+    "Value": "",
+    "Dimension": "шт",
+    "Caption": ""
+  },
+  {
+    "Section": "Химоза",
+    "Name": "пакет маленький",
+    "Value": "",
+    "Dimension": "шт",
+    "Caption": ""
+  },
+  {
+    "Section": "Химоза",
+    "Name": "фольга",
+    "Value": "",
+    "Dimension": "шт",
+    "Caption": ""
+  },
+  {
+    "Section": "Химоза",
+    "Name": "бумага запекательная",
+    "Value": "",
+    "Dimension": "шт",
+    "Caption": ""
+  },
+  {
+    "Section": "Химоза",
+    "Name": "рукав запекательный",
+    "Value": "",
+    "Dimension": "шт",
+    "Caption": ""
+  },
+  {
+    "Section": "Химоза",
+    "Name": "Фейри",
+    "Value": "",
+    "Dimension": "л",
+    "Caption": ""
+  },
+  {
+    "Section": "Химоза",
+    "Name": "Унитазный фейри",
+    "Value": "",
+    "Dimension": "л",
+    "Caption": ""
+  },
+  {
+    "Section": "Мокрое",
+    "Name": "Чай",
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": "Хулис"
+  },
+  {
+    "Section": "Мокрое",
+    "Name": "кофе",
+    "Value": "",
+    "Dimension": "гр",
+    "Caption": ""
+  },
+  {
+    "Section": "Мокрое",
+    "Name": "Сок пиписиновый",
+    "Value": "",
+    "Dimension": "л",
+    "Caption": ""
+  },
+  {
+    "Section": "Мокрое",
+    "Name": "Сок томатовый",
+    "Value": "",
+    "Dimension": "л",
+    "Caption": ""
+  },
+  {
+    "Section": "Мокрое",
+    "Name": "Сок нанасовый",
+    "Value": "",
+    "Dimension": "л",
+    "Caption": ""
+  },
+  {
+    "Section": "Мокрое",
+    "Name": "Гороноводное",
+    "Value": "",
+    "Dimension": "л",
+    "Caption": ""
+  },
+  {
+    "Section": "Мокрое",
+    "Name": "Ласточка",
+    "Value": "",
+    "Dimension": "л",
+    "Caption": ""
+  },
+  {
+    "Section": "Мокрое",
+    "Name": "минералоска",
+    "Value": "",
+    "Dimension": "л",
+    "Caption": "горноводное, ласточка ,медвежка"
+  },
+  {
+    "Section": "Мокрое",
+    "Name": "Водичка 5л",
+    "Value": "",
+    "Dimension": "шт",
+    "Caption": ""
+  },
+  {
+    "Section": "Мокрое",
+    "Name": "Медвежка",
+    "Value": "",
+    "Dimension": "л",
+    "Caption": ""
   }
 ]

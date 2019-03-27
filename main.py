@@ -3,10 +3,13 @@ from notebook import testClassNodebook
 
 import glob
 from acreditationDooD import compil_ot_file
+from acreditationDooD import copy_to_pdf
 
 from madeRes import CatalogTovar
 import datetime
 def main():
+    run = datetime.datetime.today()
+
     dirName = 'O:\\БАЗА УП НА АККРЕДИТАЦИЮ/'
     # dirName = 'D:\\up base'
     dirToPDF = 'D:\\up base PDF'
@@ -18,12 +21,14 @@ def main():
     # testClassNodebook()
     # работит
 
-    p = CatalogTovar()
-    p.testAddNode()
+    # p = CatalogTovar()
+    # p.testAddNode()
+    # p.readCSV()
 
 
     # Создать общий выходной файл
-    # compil_ot_file(dirName,fileOutAll)
+    compil_ot_file(dirName,fileOutAll)
+
     # Создать выходной файл для PDF директории
     # compil_ot_file(dirToPDF, fileOutPDF)
 
@@ -48,5 +53,14 @@ def main():
     # print(next(os.walk(dirName)))
     #
     # print(count(dirName))
+
+    fin = datetime.datetime.today()
+    LeadTime = fin - run
+
+    print(str(run.__format__('%d-%m-%Y %H:%M:%S')) + " <-- Start")
+    print(str(fin.__format__('%d-%m-%Y %H:%M:%S')) + " <-- Finished")
+
+    print('Lead time = ' + str(LeadTime))
+
 if __name__ == '__main__':
     main()
