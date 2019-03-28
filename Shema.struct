@@ -1,0 +1,23 @@
+child: notebook
+    child: DataProductBase
+        - id
+        - Caption
+        - Dimension
+        - Name
+        - Section
+        - Value
+
+    child: UserBase
+        - log
+        - pass
+
+        - child: TransactionList
+            - idDataProductBase
+            - Value
+            - Check // true/false
+            - DateAdd
+            - DateBuy
+            - DateCheckout
+            - Urgensy
+            - MaxPrice
+            - MinPrice

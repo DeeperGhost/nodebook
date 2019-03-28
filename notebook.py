@@ -54,9 +54,13 @@ class NODEBOOK:
         for key in keys:
             print(key,dbstr[key])
 
-    def BUY_NODE(self):
-        buy = input('Че подбросить?')
-        print(buy + " <- зафиксировано, взято на контроль.")
+    def BUY_NODE(self, urgency, name, value):
+        # buy = input('Че подбросить?')
+        timenow =datetime.datetime.today().strftime('%d/%m/%Y:%H.%M')
+        testNode = {'idDataProductBase': '-Lb1MDlKPbZ352DSEpOb', 'Value':700, 'Check' : 'false','DateAdd' : timenow,
+                    'DateBuy':"",'DateCheckout':'', 'Urgensy':urgency,'MaxPrice':70,'MinPrice':''}
+        self.db.child('HataNet').child('TransactionList').push(testNode)
+        # print(buy + " <- зафиксировано, взято на контроль.")
 
     def DO_BUY_NODE(self):
         buy = input('Че Купил Епта?')
@@ -77,14 +81,42 @@ class NODEBOOK:
             self.db.child('dataProductBase').push(i)
         print("Загружено")
 
+    # поиск в базе товаров по имени наброски рукожопные абы как работало
+    def SEARCH_IN_BASE(self, name):
 
+        dbBASE = self.db.child('dataProductBase').get().val()
+        keys = dbBASE.keys()
+        # Нахождение точного совпадения
+        for key in keys:
+            if name == dbBASE[key]['Name']:
+                print("найдено--> ",key,dbBASE[key])
+                return key
+        # нахождение частичного совпадения
+        t=[]
+        for key in keys:
+            if dbBASE[key]['Name'].find(name) > -1:
+                print("найдено подстрока в --> ",key,dbBASE[key])
+                t.append(key)
+        if(t.__len__() > 0):
+            return(t)
+        # выход если совпаденией не найддено
+        else:
+            print('not found -->> please update Base if you want')
+            return (0)
 
 
 def testClassNodebook():
     nodebook  = NODEBOOK()
-    nodebook.PUSHH_NODE(event = 'жопник')
-    nodebook.PRINT_NODES()
-    nodebook.initBase()
+
+    nodebook.BUY_NODE(urgency=6)
+
+    print(nodebook.SEARCH_IN_BASE(name="Говядина"))
+
+    # nodebook.PUSHH_NODE(event = 'жопник')
+    # nodebook.PRINT_NODES()
+
+    # загружает базу товара из Json
+    # nodebook.initBase()
     # nodebook.BUY_NODE()
     # nodebook.DO_BUY_NODE()
     # nodebook.CLEAR_NODES()

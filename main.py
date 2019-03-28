@@ -7,6 +7,7 @@ from acreditationDooD import copy_to_pdf
 
 from madeRes import CatalogTovar
 import datetime
+
 def main():
     run = datetime.datetime.today()
 
@@ -19,6 +20,8 @@ def main():
     # notebok('обед',datetime.datetime.today().strftime('%d/%m/%Y:%H/%M'))
 
     # testClassNodebook()
+
+
     # работит
 
     # p = CatalogTovar()
