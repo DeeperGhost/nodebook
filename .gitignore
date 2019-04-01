@@ -4,5 +4,5 @@ venv/*
 *.xlsx
 *.jpg
 config.py
-db.sqllite3
+db.sqlite3
 __pycache__/*
