@@ -1,6 +1,7 @@
 .idea/*
 venv/*
 *.csv
+*.pyc
 *.xlsx
 *.jpg
 config.py
