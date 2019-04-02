@@ -1,11 +1,19 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <title>Создание сетки страницы</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <p>Hi there!</p>
-    <p>It works!</p>
+<div class="header">Логотип и меню</div>
+
+<div class="left-column">Основное содержание страницы</div>
+
+<div class="right-column">Боковая колонка</div>
+
+<div class="footer">Подвал</div>
 </body>
 </html>
