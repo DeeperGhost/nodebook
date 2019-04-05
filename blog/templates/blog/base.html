@@ -1,16 +1,73 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Base</title>
+
+    <!--Шапка шрифт и css-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/structApp.css' %}">
+
+
+    <link rel="stylesheet" href="{% static 'css/taskNode.css' %}">
+
+    <!--Таскательная хрень вариант первонайденый надо работать и переделать-->
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="{% static 'js/taskNode.js' %}"></script>
+
 </head>
 <body>
-    <h1>Редактор базы</h1>
-    <a href="/list">list</a>
-    <a href="/base">base</a>
-    <a href="/statistic">statistic</a>
-    <a href="/">index</a>
-    <a href="/login" target="_blank">login</a>
+    <header class = "header">
+        <div class="header-left">
+            <a href="/" class = "header-NB-nav">index</a></li>
+        </div>
+
+        <div class="header-center">
+            <a href="/list" class = "header-NB-nav">Список</a>
+            <a href="/base" class = "header-NB-nav">База</a>
+            <a href="/statistic" class = "header-NB-nav">Статистика</a>
+        </div>
+
+        <div class="header-right">
+            <a href="/login"class = "header-NB-nav" target="_blank">login</a>
+        </div>
+    </header>
+
+
+
+
+    <div class="column">
+        <div class="portlet">
+            <div class="portlet-header">Feeds</div>
+            <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+        </div>
+        <div class="portlet">
+            <div class="portlet-header">News</div>
+            <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="portlet">
+            <div class="portlet-header">Shopping</div>
+            <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="portlet">
+            <div class="portlet-header">Links</div>
+            <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+        </div>
+        <div class="portlet">
+            <div class="portlet-header">Images</div>
+            <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+        </div>
+    </div>
+
 
 </body>
 </html>

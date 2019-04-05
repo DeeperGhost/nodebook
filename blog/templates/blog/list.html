@@ -1,18 +1,33 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <!--Шапка шрифт и css-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/structApp.css' %}">
+
     <title>List</title>
 </head>
 <body>
 
-    <h1>Закупочка</h1>
+<header class = "header">
+    <div class="header-left">
+        <a href="/" class = "header-NB-nav">index</a></li>
+    </div>
 
-    <a href="/list">list</a>
-    <a href="/base">base</a>
-    <a href="/statistic">statistic</a>
-    <a href="/">index</a>
-    <a href="/login" target="_blank">login</a>
+    <div class="header-center">
+        <a href="/list" class = "header-NB-nav">Список</a>
+        <a href="/base" class = "header-NB-nav">База</a>
+        <a href="/statistic" class = "header-NB-nav">Статистика</a>
+    </div>
+
+    <div class="header-right">
+        <a href="/login"class = "header-NB-nav" target="_blank">login</a>
+    </div>
+</header>
 
 </body>
 </html>
