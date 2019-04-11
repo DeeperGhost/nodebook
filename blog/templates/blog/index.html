@@ -11,6 +11,17 @@
     <link rel="stylesheet" href="{% static 'css/structApp.css' %}">
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!--Таскательная хрень вариант первонайденый надо работать и переделать-->
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="{% static 'js/taskNode.js' %}"></script>
+
+
+    <link rel="stylesheet" href="{% static 'css/taskNode.css' %}">
+
+
+
 </head>
 <body>
 
@@ -29,6 +40,50 @@
         <a href="/login"class = "header-NB-nav" target="_blank">login</a>
     </div>
 </header>
+
+<!--{% for key, value in data %}-->
+
+<!--<p> {{ key }}: </p> <p>{{ value }} </p> <p>+1 {{ value.Name }} +  {{value.Section  }} </p>-->
+
+<!--{% endfor %}-->
+<!--Контент-->
+<!--<div class="column">-->
+    <!--{% for key, value in data %}-->
+    <!--<div class="portlet">-->
+        <!--<div class="portlet-header">{{ value.Name }}</div>-->
+        <!--<div class="portlet-content">{{ value }} +1 {{value.Section  }}</div>-->
+    <!--</div>-->
+    <!--{% endfor %}-->
+<!--</div>-->
+<div class="column">
+    {% for key, value in data %}
+    <div class="portlet">
+        <div class="portlet-header">{{ value.Name }} </div>
+        <div class="portlet-content"> {{ key }} , {{value.Section}}</div>
+
+
+    </div>
+    {% endfor %}
+</div>
+
+<div class="column">
+    <div class="portlet">
+        <div class="portlet-header">Shopping</div>
+        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+    </div>
+</div>
+
+<div class="column">
+    <div class="portlet">
+        <div class="portlet-header">Links</div>
+        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+    </div>
+    <div class="portlet">
+        <div class="portlet-header">Images</div>
+        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+    </div>
+</div>
+
 
 </body>
 </html>

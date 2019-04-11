@@ -6,17 +6,14 @@
     <title>Base</title>
 
     <!--Шапка шрифт и css-->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/structApp.css' %}">
 
 
-    <link rel="stylesheet" href="{% static 'css/taskNode.css' %}">
-
-    <!--Таскательная хрень вариант первонайденый надо работать и переделать-->
-    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="{% static 'js/taskNode.js' %}"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -34,39 +31,27 @@
         <div class="header-right">
             <a href="/login"class = "header-NB-nav" target="_blank">login</a>
         </div>
+
+
     </header>
 
 
 
-
-    <div class="column">
-        <div class="portlet">
-            <div class="portlet-header">Feeds</div>
-            <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
-        </div>
-        <div class="portlet">
-            <div class="portlet-header">News</div>
-            <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
-        </div>
-    </div>
-
-    <div class="column">
-        <div class="portlet">
-            <div class="portlet-header">Shopping</div>
-            <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+    <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Link with href
+        </a>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Button with data-target
+        </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
         </div>
     </div>
 
-    <div class="column">
-        <div class="portlet">
-            <div class="portlet-header">Links</div>
-            <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
-        </div>
-        <div class="portlet">
-            <div class="portlet-header">Images</div>
-            <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
-        </div>
-    </div>
+
 
 
 </body>

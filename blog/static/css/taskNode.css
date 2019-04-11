@@ -8,40 +8,57 @@
   }
 
 
-
-
-
   .column {
-    width: 170px;
+    min-width: 300px;
+    max-width: 300px;
+    position: relative;
+
+
     float: left;
     padding-bottom: 100px;
     border : ridge;
+    height: 100%;
+    margin: 0 3px;
+    word-wrap: break-word;
+
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+
+    background : #EAE6CA
   }
   .portlet {
-    margin: 0 1em 1em 0;
-    padding: 0.3em;
+
+    padding: 0em;
     border : ridge;
   }
   .portlet-header {
     padding: 0.2em 0.3em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.1em;
     position: relative;
-    border : ridge;
+
+    background : #44944A
   }
   .portlet-toggle {
     position: absolute;
-    top: 50%;
+    aria-expanded: false;
+    top: 10%;
     right: 0;
-    margin-top: -8px;
+    margin-top: -1px;
     border : ridge;
+
   }
   .portlet-content {
-    padding: 0.4em;
-    border : ridge;
+    padding: 0.1em;
+
+    background : #fc0
   }
   .portlet-placeholder {
     border: 1px dotted black;
     margin: 0 1em 1em 0;
     height: 50px;
     border : ridge;
+
   }
+
+

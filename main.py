@@ -32,6 +32,8 @@ def main():
     # Создать общий выходной файл
     compil_ot_file(dirName,fileOutAll)
 
+
+
     # Создать выходной файл для PDF директории
     # compil_ot_file(dirToPDF, fileOutPDF)
 

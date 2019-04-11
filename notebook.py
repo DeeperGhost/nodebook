@@ -48,11 +48,12 @@ class NODEBOOK:
         self.db.child('names').push({'node':event,'time':datetime.datetime.today().strftime('%d/%m/%Y:%H.%M')})
 
     def PRINT_NODES(self):
-        dbstr = self.db.child('names').get().val()
+        dbstr = self.db.child('dataProductBase').get().val()
 
         keys = dbstr.keys()
         for key in keys:
             print(key,dbstr[key])
+        return dbstr
 
     def BUY_NODE(self, urgency, name, value):
         # buy = input('Че подбросить?')
@@ -108,12 +109,12 @@ class NODEBOOK:
 def testClassNodebook():
     nodebook  = NODEBOOK()
 
-    nodebook.BUY_NODE(urgency=6)
+    # nodebook.BUY_NODE(urgency=6)
 
     print(nodebook.SEARCH_IN_BASE(name="Говядина"))
 
     # nodebook.PUSHH_NODE(event = 'жопник')
-    # nodebook.PRINT_NODES()
+    nodebook.PRINT_NODES()
 
     # загружает базу товара из Json
     # nodebook.initBase()
