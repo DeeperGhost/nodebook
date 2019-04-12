@@ -4,7 +4,7 @@
     transform: rotate(3deg);
     -moz-transform: rotate(3deg);
     -webkit-transform: rotate(3deg);
-    border : solid;
+
   }
 
 
@@ -25,39 +25,53 @@
     display: inline-block;
     vertical-align: top;
 
-    background : #EAE6CA
+
+    background : #dfe3e6
+
+
   }
   .portlet {
 
     padding: 0em;
-    border : ridge;
+
+
+    border-radius: 3px;
   }
   .portlet-header {
     padding: 0.2em 0.3em;
     margin-bottom: 0.1em;
     position: relative;
 
-    background : #44944A
+
+    background : #f5f6f7
+
+
   }
   .portlet-toggle {
     position: absolute;
     aria-expanded: false;
-    top: 10%;
-    right: 0;
+    top: 40%;
+    right: 5%;
     margin-top: -1px;
     border : ridge;
+    width : 10px;
+    height : 10px;
+
+    border-radius: 20px;
 
   }
   .portlet-content {
     padding: 0.1em;
+    border-radius: 8px;
+    background : #ffff9e
 
-    background : #fc0
+
   }
   .portlet-placeholder {
     border: 1px dotted black;
     margin: 0 1em 1em 0;
     height: 50px;
-    border : ridge;
+
 
   }
 

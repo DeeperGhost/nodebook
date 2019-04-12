@@ -14,10 +14,11 @@ class listView(View):
     nodebook  = NODEBOOK()
 
     def get(self, request, *args, **kwargs):
-        dbstr = self.nodebook.PRINT_NODES()
+        dbstr = self.nodebook.PRINT_NODES(nameList='dataProductBase')
+        dbTaskList = self.nodebook.PRINT_NODES(nameList='TaskList')
         #     keys = dbstr.keys()
         # return HttpResponse('Hello, World!')
-        return render(request, 'blog/index.html', {'data': dbstr.items()})
+        return render(request, 'blog/index.html', {'data': dbstr.items(),'dataTaskList': dbTaskList.items()})
 
 
 

@@ -47,8 +47,8 @@ class NODEBOOK:
     def PUSHH_NODE(self,event):
         self.db.child('names').push({'node':event,'time':datetime.datetime.today().strftime('%d/%m/%Y:%H.%M')})
 
-    def PRINT_NODES(self):
-        dbstr = self.db.child('dataProductBase').get().val()
+    def PRINT_NODES(self,nameList):
+        dbstr = self.db.child(nameList).get().val()
 
         keys = dbstr.keys()
         for key in keys:
@@ -61,6 +61,16 @@ class NODEBOOK:
         testNode = {'idDataProductBase': '-Lb1MDlKPbZ352DSEpOb', 'Value':700, 'Check' : 'false','DateAdd' : timenow,
                     'DateBuy':"",'DateCheckout':'', 'Urgensy':urgency,'MaxPrice':70,'MinPrice':''}
         self.db.child('HataNet').child('TransactionList').push(testNode)
+        # print(buy + " <- зафиксировано, взято на контроль.")
+
+    def ADD_TASK_LIST(self, urgency, id):
+        # buy = input('Че подбросить?')
+        timenow =datetime.datetime.today().strftime('%d/%m/%Y:%H.%M')
+
+        testNode = {'idDataProductBase': id, 'Value':700, 'Check' : 'false','DateAdd' : timenow,
+                    'DateBuy':"",'DateCheckout':'', 'Urgensy':urgency,'MaxPrice':70,'MinPrice':''}
+
+        self.db.child('TaskList').push(testNode)
         # print(buy + " <- зафиксировано, взято на контроль.")
 
     def DO_BUY_NODE(self):
@@ -110,11 +120,12 @@ def testClassNodebook():
     nodebook  = NODEBOOK()
 
     # nodebook.BUY_NODE(urgency=6)
-
+    nodebook.ADD_TASK_LIST(urgency=6,id='-Lb1MF-LHAL8g9LZL0A1')
     print(nodebook.SEARCH_IN_BASE(name="Говядина"))
 
     # nodebook.PUSHH_NODE(event = 'жопник')
-    nodebook.PRINT_NODES()
+    # Вывести ноды
+    # nodebook.PRINT_NODES()
 
     # загружает базу товара из Json
     # nodebook.initBase()
