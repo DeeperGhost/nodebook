@@ -74,5 +74,12 @@
 
 
   }
+  input[type=number] {
+
+    border: none;
+
+
+    background : #ffff9e
+  }
 
 

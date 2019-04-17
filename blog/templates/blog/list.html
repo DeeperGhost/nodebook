@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <title>Создание сетки страницы</title>
 
     <!--Шапка шрифт и css-->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/structApp.css' %}">
 
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <!--Таскательная хрень вариант первонайденый надо работать и переделать-->
     <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
@@ -18,7 +20,8 @@
 
     <link rel="stylesheet" href="{% static 'css/taskNode.css' %}">
 
-    <title>List</title>
+
+
 </head>
 <body>
 
@@ -38,43 +41,34 @@
     </div>
 </header>
 
-<!--Контент-->
-
 
 <div class="column">
+    {% for key, value in data %}
     <div class="portlet">
-        <div class="portlet-header">Feeds</div>
-        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
-    </div>
-    <div class="portlet">
-        <div class="portlet-header">News</div>
-        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
-
-
-
-    </div>
-
-    <div class="card">
-        <div class="card-header" id="headingThree">
-            <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Collapsible Group Item #1
-                </button>
-            </h5>
+        <div class="portlet-header">{{ value.Name }} </div>
+        <div class="portlet-content">
+            <ul> {{ value.Name }}
+                <li>>key = {{key}} </li>
+                <li>Caption = {{value.Caption}} </li>
+                <li>Dimension = {{value.Dimension}}</li>
+                <li>Name = {{value.Name}}</li>
+                <li>Section = {{value.Section}}</li>
+                <li>Value = <input type=number min="0" max="1000" step="1" value=5> {{value.Value}}</li>
+            </ul>
         </div>
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-            <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            </div>
-        </div>
+
     </div>
+    {% endfor %}
 </div>
 
 <div class="column">
+    {% for key, value in dataTaskList %}
     <div class="portlet">
-        <div class="portlet-header">Shopping</div>
-        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+        <div class="portlet-header">{{ value.idDataProductBase }} </div>
+        <div class="portlet-content"> {{ value.DateAdd }} , {{value.Check}}, {{value.Value}}</div>
+
     </div>
+    {% endfor %}
 </div>
 
 <div class="column">

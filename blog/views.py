@@ -18,8 +18,12 @@ class listView(View):
         dbTaskList = self.nodebook.PRINT_NODES(nameList='TaskList')
         #     keys = dbstr.keys()
         # return HttpResponse('Hello, World!')
-        return render(request, 'blog/index.html', {'data': dbstr.items(),'dataTaskList': dbTaskList.items()})
+        return render(request, 'blog/list.html', {'data': dbstr.items(),'dataTaskList': dbTaskList.items()})
 
+class indexView(View):
+
+    def get(self, request, *args, **kwargs):
+        return render(request, 'blog/index.html', {})
 
 
 
@@ -42,8 +46,8 @@ def login(request):
 def base(request):
     return render(request, 'blog/base.html', {})
 
-def list(request):
-    return render(request, 'blog/list.html', {})
+# def list(request):
+#     return render(request, 'blog/list.html', {})
 
 def statistic(request):
     return render(request, 'blog/statistic.html', {})
