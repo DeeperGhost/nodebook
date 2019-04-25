@@ -10,5 +10,8 @@ urlpatterns = [
     # path('list/',views.list),
     path('', indexView.as_view(), name='indexView'),
     path('base/',views.base),
+
+    path('post_edit/', views.post_new, name='post_new'),
+
     path('statistic/',views.statistic)
 ]

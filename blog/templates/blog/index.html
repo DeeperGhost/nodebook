@@ -40,7 +40,17 @@
 </header>
 
 <!--Контент-->
-
+<p>asdfsdfsd</p>
+<!--<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>-->
+<a href="{% url 'post_new' %}"class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+<div class="row">
+    <div class="col-md-8">
+        {% block content %}
+        {% endblock %}
+    </div>
+</div>
+<h1><a href="/">Django Girls Blog</a></h1>
+<!--контент 2-->
 
 <div class="column">
     <div class="portlet">
@@ -88,6 +98,9 @@
         <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
     </div>
 </div>
+
+
+
 
 
 </body>

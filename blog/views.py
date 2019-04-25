@@ -4,8 +4,9 @@ from notebook import NODEBOOK
 
 from django.views.generic import View
 from django.http import HttpResponse
+from .forms import PostForm
 
-
+from config import bufet_test_const
 # Create your views here.
 # def post_list(request):
 #     return render(request, 'blog/index.html', {})
@@ -23,9 +24,15 @@ class listView(View):
 class indexView(View):
 
     def get(self, request, *args, **kwargs):
-        return render(request, 'blog/index.html', {})
+        form = PostForm()
+        return render(request, 'blog/index.html', {'form': form})
 
-
+def post_new(request):
+    form = PostForm()
+    t = form.fields('title')
+    t
+    print(t)
+    return render(request, 'blog/post_edit.html', {'form': form})
 
 def login(request):
 
