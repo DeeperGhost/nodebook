@@ -90,9 +90,22 @@ def qrcodeprint():
     img.save("image.jpg")
 
 #копирует директорию с pdf
-def copy_to_pdf(directory,directoryToPdf):
-    shutil.copytree(directory,directoryToPdf,ignore=ignore_patterns('*.doc', '*.docx','*.txt','*.pli','*.xml','*.plx','*.plm',
-                                                                    '*.xlsx','*.doc','*.xls'))
+def copy_to_pdf(directory,directoryToPdf,school):
+    # shutil.copytree(directory,directoryToPdf,ignore=ignore_patterns('*.doc', '*.docx','*.txt','*.pli','*.xml','*.plx','*.plm',
+    #                                                                 '*.xlsx','*.doc','*.xls','*Арсеньев*',
+    #                                                                 '*аспирантура*','*Большой Камень*','*Дальнегорск*',
+    #                                                                 '*Находка*','*Уссурийск*','*ЦРПДО*',
+    #                                                                 '*Электронные версии ОС ВО ДВФУ*',
+    #                                                                 '*Электронные версии ФГОС ВО*',
+    #                                                                 '*Электронные версии ФГОС ВО 3++*'))
+
+    shutil.copytree(directory+school,directoryToPdf+'/'+school,ignore=ignore_patterns('*.doc', '*.docx','*.txt','*.pli','*.xml','*.plx','*.plm',
+                                                                    '*.xlsx','*.doc','*.xls','*Арсеньев*',
+                                                                    '*аспирантура*','*Большой Камень*','*Дальнегорск*',
+                                                                    '*Находка*','*Уссурийск*','*ЦРПДО*',
+                                                                    '*Электронные версии ОС ВО ДВФУ*',
+                                                                    '*Электронные версии ФГОС ВО*',
+                                                                    '*Электронные версии ФГОС ВО 3++*'))
     print("Закопировано")
 
 

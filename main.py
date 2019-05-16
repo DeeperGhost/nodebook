@@ -10,7 +10,7 @@ import datetime
 
 def main():
     run = datetime.datetime.today()
-
+    print(str(run.__format__('%d-%m-%Y %H:%M:%S')) + " <-- Start")
     dirName = 'O:\\БАЗА УП НА АККРЕДИТАЦИЮ/'
     # dirName = 'D:\\up base'
     dirToPDF = 'D:\\up base PDF'
@@ -30,7 +30,7 @@ def main():
 
 
     # Создать общий выходной файл
-    compil_ot_file(dirName,fileOutAll)
+    # compil_ot_file(dirName,fileOutAll)
 
 
 
@@ -40,7 +40,7 @@ def main():
     # qrcodeprint()
 
     # копирует пдфки
-    # copy_to_pdf(dirName,dirToPDF)
+    copy_to_pdf(dirName,dirToPDF,'ШИГН')
 
 
 
