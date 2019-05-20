@@ -4,6 +4,8 @@ from notebook import testClassNodebook
 import glob
 from acreditationDooD import compil_ot_file
 from acreditationDooD import copy_to_pdf
+from acreditationDooD import copySHEN
+from acreditationDooD import copyDrozdova
 
 from madeRes import CatalogTovar
 import datetime
@@ -14,6 +16,8 @@ def main():
     dirName = 'O:\\БАЗА УП НА АККРЕДИТАЦИЮ/'
     # dirName = 'D:\\up base'
     dirToPDF = 'D:\\up base PDF'
+    SHENDOOD = 'D:\\SHENDOOD'
+    SHENDROZDOVA = 'W:\ШЕН_Дроздова'
     fileOutAll = 'file.txt'
     fileOutPDF = 'filePDF.txt'
 
@@ -30,7 +34,7 @@ def main():
 
 
     # Создать общий выходной файл
-    # compil_ot_file(dirName,fileOutAll)
+    compil_ot_file(dirName,fileOutAll)
 
 
 
@@ -40,10 +44,15 @@ def main():
     # qrcodeprint()
 
     # копирует пдфки
-    copy_to_pdf(dirName,dirToPDF,'ШИГН')
+    # copy_to_pdf(dirName,dirToPDF,'ШИГН') #ШИГН
+    # copy_to_pdf(dirName,dirToPDF,'ЮШ') #ЮШ
+    # copy_to_pdf(dirName,dirToPDF,'ШЕН')
 
+    # Копирует УПЫ И КУГИ с ДООД
+    # copySHEN(dirName,SHENDOOD,'ШЕН')
 
-
+    # Копирует из дроздова не УПЫ и КУГИ
+    # copyDrozdova(SHENDROZDOVA,SHENDOOD,'ШЕНДРОЗДОВА')
 
 
 
