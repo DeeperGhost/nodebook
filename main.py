@@ -2,10 +2,13 @@ from notebook import notebok
 from notebook import testClassNodebook
 
 import glob
-from acreditationDooD import compil_ot_file
-from acreditationDooD import copy_to_pdf
-from acreditationDooD import copySHEN
-from acreditationDooD import copyDrozdova
+# from acreditationDooD import compil_ot_file
+# from acreditationDooD import copy_to_pdf
+# from acreditationDooD import copySHEN
+# from acreditationDooD import copyDrozdova
+# from acreditationDooD import updateQuest
+
+from acreditationDooD import accreditation
 
 from madeRes import CatalogTovar
 import datetime
@@ -13,13 +16,7 @@ import datetime
 def main():
     run = datetime.datetime.today()
     print(str(run.__format__('%d-%m-%Y %H:%M:%S')) + " <-- Start")
-    dirName = 'O:\\БАЗА УП НА АККРЕДИТАЦИЮ/'
-    # dirName = 'D:\\up base'
-    dirToPDF = 'D:\\up base PDF'
-    SHENDOOD = 'D:\\SHENDOOD'
-    SHENDROZDOVA = 'W:\ШЕН_Дроздова'
-    fileOutAll = 'file.txt'
-    fileOutPDF = 'filePDF.txt'
+
 
     # notebok('обед',datetime.datetime.today().strftime('%d/%m/%Y:%H/%M'))
 
@@ -33,26 +30,7 @@ def main():
     # p.readCSV()
 
 
-    # Создать общий выходной файл
-    compil_ot_file(dirName,fileOutAll)
-
-
-
-    # Создать выходной файл для PDF директории
-    # compil_ot_file(dirToPDF, fileOutPDF)
-
-    # qrcodeprint()
-
-    # копирует пдфки
-    # copy_to_pdf(dirName,dirToPDF,'ШИГН') #ШИГН
-    # copy_to_pdf(dirName,dirToPDF,'ЮШ') #ЮШ
-    # copy_to_pdf(dirName,dirToPDF,'ШЕН')
-
-    # Копирует УПЫ И КУГИ с ДООД
-    # copySHEN(dirName,SHENDOOD,'ШЕН')
-
-    # Копирует из дроздова не УПЫ и КУГИ
-    # copyDrozdova(SHENDROZDOVA,SHENDOOD,'ШЕНДРОЗДОВА')
+    accreditation()
 
 
 

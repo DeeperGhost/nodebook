@@ -91,6 +91,7 @@ def qrcodeprint():
 
 #копирует директорию с pdf
 def copy_to_pdf(directory,directoryToPdf,school):
+    print(school)
     # shutil.copytree(directory,directoryToPdf,ignore=ignore_patterns('*.doc', '*.docx','*.txt','*.pli','*.xml','*.plx','*.plm',
     #                                                                 '*.xlsx','*.doc','*.xls','*Арсеньев*',
     #                                                                 '*аспирантура*','*Большой Камень*','*Дальнегорск*',
@@ -98,9 +99,9 @@ def copy_to_pdf(directory,directoryToPdf,school):
     #                                                                 '*Электронные версии ОС ВО ДВФУ*',
     #                                                                 '*Электронные версии ФГОС ВО*',
     #                                                                 '*Электронные версии ФГОС ВО 3++*'))
-
-    shutil.copytree(directory+school,directoryToPdf+'/'+school,ignore=ignore_patterns('*.doc', '*.docx','*.txt','*.pli','*.xml','*.plx','*.plm',
-                                                                    '*.xlsx','*.doc','*.xls','*Арсеньев*',
+    # рабочая схема
+    shutil.copytree(directory+school,directoryToPdf+'/'+school,ignore=ignore_patterns('*.doc', '*.docx','*.txt','*.pli','*.xml','*.plx','*.plm','*.db',
+                                                                    '*.xlsx','*.doc','*.xls','*.xlsm','*.rtf','*Арсеньев*',
                                                                     '*аспирантура*','*Большой Камень*','*Дальнегорск*',
                                                                     '*Находка*','*Уссурийск*','*ЦРПДО*',
                                                                     '*Электронные версии ОС ВО ДВФУ*',
@@ -108,9 +109,54 @@ def copy_to_pdf(directory,directoryToPdf,school):
                                                                     '*Электронные версии ФГОС ВО 3++*','*УВЦ*',
                                                                     '*российско-австралийская*','*российско-американская*',
                                                                     '*е выходя*'))
+    #тестовая без папок
+    # shutil.copytree(directory+school,directoryToPdf+'/'+school,ignore=ignore_patterns('*.doc', '*.docx','*.txt','*.pli','*.xml','*.plx','*.plm',
+    #                                                                                   '*.xlsx','*.doc','*.xls','*.xlsm','*.rtf','*Арсеньев*',
+    #                                                                                   '*аспирантура*','*Большой Камень*','*Дальнегорск*',
+    #                                                                                   '*Находка*','*Уссурийск*','*ЦРПДО*',
+    #                                                                                   '*Электронные версии ОС ВО ДВФУ*',
+    #                                                                                   '*Электронные версии ФГОС ВО*',
+    #                                                                                   '*Электронные версии ФГОС ВО 3++*','*УВЦ*',
+    #                                                                                   '*российско-австралийская*','*российско-американская*',
+    #                                                                                   '*е выходя*',
+    #                                                                                   '*прил 0 опоп*','*прил 3 МК*','*прил 7 ССК*','*прил 8 ЭБС*','*прил 9 МТО*','*прил 10 РОП*'))
     print("Закопировано")
 
+# выполняет задание по обновлению
+def updateQuest():
+    print("updateQuest")
+    t= 'O:\БАЗА УП НА АККРЕДИТАЦИЮ\ШЭМ\Бакалавриат\\2014 г.н. ЗФО 38.03.01 Бухгалтерский учет, анализ и аудит\аОПОП'
+    t1= '\ШЭМ\Бакалавриат\\2014 г.н. ЗФО 38.03.01 Бухгалтерский учет, анализ и аудит\аОПОП'
+    dirToPDF = 'D:\\up base PDF\\UPDATE'
+    dir1 = "O:\\БАЗА УП НА АККРЕДИТАЦИЮ"
+    fileQuest = "ОБНОВЛЕНИЕ.txt"
 
+    logUpdate = open('D:\\up base PDF\\logUpdate.txt', 'a')
+    f = open(dir1+'\\'+fileQuest,'r')
+    print(dir1+'\\'+fileQuest)
+    for line in f:
+        print(line)
+    # shutil.copy(dir1+fileQuest,r'D:/1.txt')
+        str1 = 'O'+line[1:]
+        str1 = str1.replace('\n','')
+        print(str1)
+        str2 = str1.replace('O:\\БАЗА УП НА АККРЕДИТАЦИЮ',dirToPDF)
+
+        run = datetime.datetime.today()
+        logUpdate.write(str(run.__format__('%d-%m-%Y %H:%M:%S'))+' ' + str2+'\n')
+
+        shutil.copytree(str1,str2,ignore=ignore_patterns('*.doc', '*.docx','*.txt','*.pli','*.xml','*.plx','*.plm','*.db',
+                                                                                          '*.xlsx','*.doc','*.xls','*.xlsm','*.rtf','*Арсеньев*',
+                                                                                          '*аспирантура*','*Большой Камень*','*Дальнегорск*',
+                                                                                          '*Находка*','*Уссурийск*','*ЦРПДО*',
+                                                                                          '*Электронные версии ОС ВО ДВФУ*',
+                                                                                          '*Электронные версии ФГОС ВО*',
+                                                                                          '*Электронные версии ФГОС ВО 3++*','*УВЦ*',
+                                                                                          '*российско-австралийская*','*российско-американская*',
+                                                                                          '*е выходя*'))
+
+
+    logUpdate.close()
 def copySHEN(directory,directoryToPdf,school):
     listName = ['аОПОП','аРПУД','прил 0 опоп','прил 1 КУГ','прил 2 УП','прил 3 МК','прил 4 РПУДы','прил 5 ПП НИР',
                 'прил 6 пр ГИА','прил 7 ССК','прил 8 ЭБС','прил 9 МТО','прил 10 РОП']
@@ -123,3 +169,44 @@ def copyDrozdova(directory,directoryToPdf,school):
 
     shutil.copytree(directory,directoryToPdf+'/'+school,ignore=ignore_patterns('*прил 1 КУГ*','*прил 2 УП*'))
 
+
+def accreditation():
+    dirName = 'O:\\БАЗА УП НА АККРЕДИТАЦИЮ/'
+    # dirName = 'D:\\up base'
+    dirToPDF = 'D:\\up base PDF'
+    SHENDOOD = 'D:\\SHENDOOD'
+    SHENDROZDOVA = 'W:\ШЕН_Дроздова'
+    fileOutAll = 'file.txt'
+    fileOutPDF = 'filePDF.txt'
+
+    # Создать общий выходной файл
+    compil_ot_file(dirName,fileOutAll)
+
+
+
+    # Создать выходной файл для PDF директории
+    # compil_ot_file(dirToPDF, fileOutPDF)
+
+    # qrcodeprint()
+
+
+
+    # копирует пдфки
+    # copy_to_pdf(dirName,dirToPDF,'ШИГН') #ШИГН
+    # copy_to_pdf(dirName,dirToPDF,'ЮШ') #ЮШ
+    # copy_to_pdf(dirName,dirToPDF,'ШЕН')
+    # copy_to_pdf(dirName,dirToPDF,'ИШ')
+    # copy_to_pdf(dirName,dirToPDF,'ШРМИ')
+
+    # copy_to_pdf(dirName,dirToPDF,'ШЭМ')
+    # copy_to_pdf(dirName,dirToPDF,'ШБМ')
+    # copy_to_pdf(dirName,dirToPDF,'ШЦЭ')
+
+    # обновление по запросу
+    # updateQuest()
+
+    # Копирует УПЫ И КУГИ с ДООД
+    # copySHEN(dirName,SHENDOOD,'ШЕН')
+
+    # Копирует из дроздова не УПЫ и КУГИ
+    # copyDrozdova(SHENDROZDOVA,SHENDOOD,'ШЕНДРОЗДОВА')
