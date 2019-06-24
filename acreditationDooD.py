@@ -7,6 +7,9 @@ import qrcode
 from shutil import ignore_patterns
 # import qrcode.image.svg
 
+from docx import Document
+from docx.shared import Inches
+
 
 def count(dir, counter=0):
     pout = open('out.txt', 'w')
@@ -157,19 +160,59 @@ def updateQuest():
 
 
     logUpdate.close()
+
 def copySHEN(directory,directoryToPdf,school):
     listName = ['аОПОП','аРПУД','прил 0 опоп','прил 1 КУГ','прил 2 УП','прил 3 МК','прил 4 РПУДы','прил 5 ПП НИР',
                 'прил 6 пр ГИА','прил 7 ССК','прил 8 ЭБС','прил 9 МТО','прил 10 РОП']
 
     shutil.copytree(directory+school,directoryToPdf+'/'+school,ignore=ignore_patterns('*аОПОП*','*аРПУД*','*прил 0 опоп*','*прил 3 МК*','*прил 4 РПУДы*','*прил 5 ПП НИР*',
                                                                                       '*прил 6 пр ГИА*','*прил 7 ССК*','*прил 8 ЭБС*','*прил 9 МТО*','*прил 10 РОП*'))
+
+
 def copyDrozdova(directory,directoryToPdf,school):
     listName = ['аОПОП','аРПУД','прил 0 опоп','прил 1 КУГ','прил 2 УП','прил 3 МК','прил 4 РПУДы','прил 5 ПП НИР',
                 'прил 6 пр ГИА','прил 7 ССК','прил 8 ЭБС','прил 9 МТО','прил 10 РОП']
 
     shutil.copytree(directory,directoryToPdf+'/'+school,ignore=ignore_patterns('*прил 1 КУГ*','*прил 2 УП*'))
 
+#     Гененрирует ШАблон DOCX
+def TemplateDOCX():
+    print("go gog")
+    document = Document()
+    document.add_heading('Document Title', 0)
 
+    p = document.add_paragraph('A plain paragraph having some ')
+    p.add_run('bold').bold = True
+    p.add_run(' and some ')
+    p.add_run('italic.').italic = True
+
+    document.add_heading('Heading, level 1', level=1)
+    document.add_paragraph('Intense quote', style='Intense Quote')
+
+    document.add_paragraph('first item in unordered list', style='List Bullet')
+    document.add_paragraph('first item in ordered list', style='List Number')
+
+    # document.add_picture('monty-truth.png', width=Inches(1.25))
+
+    records = ((3, '101', 'Spam'),(7, '422', 'Eggs'),(4, '631', 'Spam, spam, eggs, and spam'))
+
+    table = document.add_table(rows=1, cols=3)
+    hdr_cells = table.rows[0].cells
+    hdr_cells[0].text = 'Qty'
+    hdr_cells[1].text = 'Id'
+    hdr_cells[2].text = 'Desc'
+    for qty, id, desc in records:
+        row_cells = table.add_row().cells
+        row_cells[0].text = str(qty)
+        row_cells[1].text = id
+        row_cells[2].text = desc
+
+    document.add_page_break()
+
+    document.save('demo.docx')
+
+
+# main функция
 def accreditation():
     dirName = 'O:\\БАЗА УП НА АККРЕДИТАЦИЮ/'
     # dirName = 'D:\\up base'
@@ -180,16 +223,12 @@ def accreditation():
     fileOutPDF = 'filePDF.txt'
 
     # Создать общий выходной файл
-    compil_ot_file(dirName,fileOutAll)
-
-
-
+    # compil_ot_file(dirName,fileOutAll)
+    # TemplateDOCX()
     # Создать выходной файл для PDF директории
     # compil_ot_file(dirToPDF, fileOutPDF)
 
     # qrcodeprint()
-
-
 
     # копирует пдфки
     # copy_to_pdf(dirName,dirToPDF,'ШИГН') #ШИГН
@@ -203,10 +242,12 @@ def accreditation():
     # copy_to_pdf(dirName,dirToPDF,'ШЦЭ')
 
     # обновление по запросу
-    # updateQuest()
+    updateQuest()
 
     # Копирует УПЫ И КУГИ с ДООД
     # copySHEN(dirName,SHENDOOD,'ШЕН')
 
     # Копирует из дроздова не УПЫ и КУГИ
     # copyDrozdova(SHENDROZDOVA,SHENDOOD,'ШЕНДРОЗДОВА')
+
+

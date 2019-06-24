@@ -1,2 +1,5 @@
 pyrebase==3.0.27
 django
+python-docx
+matplotlib
+scipy

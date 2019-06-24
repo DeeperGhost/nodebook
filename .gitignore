@@ -8,3 +8,4 @@ config.py
 db.sqlite3
 __pycache__/*
 logUpdate.txt
+*.docx

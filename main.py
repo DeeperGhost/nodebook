@@ -13,6 +13,7 @@ from acreditationDooD import accreditation
 from madeRes import CatalogTovar
 import datetime
 
+from interpolate import inter
 def main():
     run = datetime.datetime.today()
     print(str(run.__format__('%d-%m-%Y %H:%M:%S')) + " <-- Start")
@@ -29,10 +30,10 @@ def main():
     # p.testAddNode()
     # p.readCSV()
 
+    # Акредитация
+    # accreditation()
 
-    accreditation()
-
-
+    inter()
 
     # with open('file.csv', mode='w') as csvf:
     #     csvf = csv.writer(csvf, delimiter=';')#, quotechar='"', quoting=csv.QUOTE_MINIMAL)
