@@ -20,6 +20,21 @@ def count(dir, counter=0):
             counter += 1
     pout.close()
     return dir + " : " + str(counter) + "files"
+# вывод списка файлов в папке
+def dirFolder():
+    dir = "M:/"
+    # dir = "d:/s_hare"
+    report = "D:\\report/report.txt"
+    # report = "M://"
+    # p = os.listdir(dir)
+    # for i in p:
+    #     print(i)
+    with open(report, "w", encoding="utf-8") as filewrite:
+        for r, d, f in os.walk(dir):
+            filewrite.write(r+'\n')
+            for i in f:
+                filewrite.write(i+'\n')
+    filewrite.close()
 
 
 # пробегает по директории и создает файл с рестром папок с пометкой пуста папка или нет

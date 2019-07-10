@@ -3,3 +3,5 @@ django
 python-docx
 matplotlib
 scipy
+keras
+tensorflow

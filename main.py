@@ -9,11 +9,13 @@ import glob
 # from acreditationDooD import updateQuest
 
 from acreditationDooD import accreditation
+from acreditationDooD import dirFolder
 
 from madeRes import CatalogTovar
 import datetime
 
 from interpolate import inter
+from learning import i2,l0
 def main():
     run = datetime.datetime.today()
     print(str(run.__format__('%d-%m-%Y %H:%M:%S')) + " <-- Start")
@@ -32,8 +34,11 @@ def main():
 
     # Акредитация
     # accreditation()
+    # dirFolder()
 
-    inter()
+    # inter()
+    # i2()
+    l0()
 
     # with open('file.csv', mode='w') as csvf:
     #     csvf = csv.writer(csvf, delimiter=';')#, quotechar='"', quoting=csv.QUOTE_MINIMAL)
