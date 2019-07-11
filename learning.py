@@ -1,10 +1,39 @@
 from numpy import loadtxt
+import numpy as np
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.layers import LSTM
 
 def l0():
-    print(0)
+    # i2()
+    NN()
+    # print(0)
+    # directory = 'D:\mashinlearn/rno/'
+    # # file = 'pima-indians-diabetes.data.csv'
+    # file = 'testlearn2.csv'
+    # # load the dataset
+    #
+    # dataset = loadtxt(directory+file, delimiter=',')
+    # dataset1 = loadtxt(directory+'testY.csv', delimiter=',')
+    # # split into input (X) and output (y) variables
+    # X = dataset[:,0:5]
+    # y = dataset[:,5]
+    #
+    # # X1 = dataset1[:,0:5]
+    # y1 = dataset1[:,5]
+    #
+    # X1 = np.array([1.,1.,1.,1.,1.])
+    # # X1 = [1.,1.,1.,1.,1.]
+    # print('y=',type(X))
+    # print('X=',X)
+    # print('X1=',type(X1))
+
+
+
+
+    # NN()
+
+def NN():
     directory = 'D:\mashinlearn/rno/'
     # file = 'pima-indians-diabetes.data.csv'
     file = 'testlearn2.csv'
@@ -16,11 +45,15 @@ def l0():
     X = dataset[:,0:5]
     y = dataset[:,5]
 
-    X1 = dataset1[:,0:5]
+    # X1 = dataset1[:,0:5]
     y1 = dataset1[:,5]
+
+    X1 = np.array([[1,1,1,1,1],[2,2,2,2,2]])
+    # X1 = [1.,1.,1.,1.,1.]
     # print(y)
     # print(X)
     # print(X1)
+
 
 
 
@@ -33,7 +66,12 @@ def l0():
     model.add(Dense(15, input_dim=5, activation='relu'))
     model.add(Dense(15, activation='relu'))
     model.add(Dense(100, activation='relu'))
-
+    model.add(Dense(50, activation='relu'))
+    model.add(Dense(5, activation='relu'))
+    model.add(Dense(15, activation='relu'))
+    model.add(Dense(100, activation='relu'))
+    model.add(Dense(50, activation='relu'))
+    model.add(Dense(5, activation='relu'))
     # model.add(LSTM(2))
     model.add(Dense(1, activation='relu'))
 
@@ -66,7 +104,6 @@ def l0():
 
     for i in range(10):
         print('test X1=',X1[i],p1[i],y1[i])
-
 
 def i2():
     print("123")

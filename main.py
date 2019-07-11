@@ -33,12 +33,12 @@ def main():
     # p.readCSV()
 
     # Акредитация
-    # accreditation()
+    accreditation()
     # dirFolder()
 
     # inter()
     # i2()
-    l0()
+    # l0()
 
     # with open('file.csv', mode='w') as csvf:
     #     csvf = csv.writer(csvf, delimiter=';')#, quotechar='"', quoting=csv.QUOTE_MINIMAL)

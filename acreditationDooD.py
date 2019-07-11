@@ -39,7 +39,7 @@ def dirFolder():
 
 # пробегает по директории и создает файл с рестром папок с пометкой пуста папка или нет
 def compil_ot_file(dirName,fileOutName):
-    # dirName = 'O:\\БАЗА УП НА АККРЕДИТАЦИЮ/'
+    dirName1 = 'O:\\БАЗА УП НА АККРЕДИТАЦИЮ/'
     # dirName = 'D:\\up base'
 
     listName = ['аОПОП','аРПУД','прил 0 опоп','прил 1 КУГ','прил 2 УП','прил 3 МК','прил 4 РПУДы','прил 5 ПП НИР',
@@ -50,7 +50,7 @@ def compil_ot_file(dirName,fileOutName):
     bufSTR ="1"
     bufSTR2 = '2'
 
-    fileOut = dirName + '\Struct\\'+fileOutName
+    fileOut = dirName1 + '\Struct\\'+fileOutName
     print(fileOut)
     with open(fileOut, "w", encoding="utf-8") as filewrite:
         for r, d, f in os.walk(dirName):
@@ -63,18 +63,20 @@ def compil_ot_file(dirName,fileOutName):
                     filewrite.write(bufSTR)
                     for file in f:
                         # print(str(r)+'/'+str(file) +'\n')
-                        b = r[dirName.__len__():str(r).rfind(str(i))]+';'+str(i)
-                        bufSTR = b + ';' + ' 1' + '\n'
+                        # Исключаем скрытый системный файл , вопрос почему переодически крашится от вывода на печать имя фйлов
+                        if(str(file)!='Thumbs.db'):
+                            b = r[dirName.__len__():str(r).rfind(str(i))]+';'+str(i)
+                            bufSTR = b + ';' + ' 1' + '\n'
 
-                        if(bufSTR != bufSTR2):
-                            filewrite.write(bufSTR)
-                            numberPapok += 1
-                            bufSTR2 = bufSTR
+                            if(bufSTR != bufSTR2):
+                                filewrite.write(bufSTR)
+                                numberPapok += 1
+                                bufSTR2 = bufSTR
             numb += 1
             print("пройдено = " + str(numb) + ' найдено папок = '+str(numberPapok))
     print('процент заполнения = ' + str(100*numberPapok/numb)[0:4] + '%')
 
-    fout = open(dirName + '\Struct\\' + 'src.txt', 'w')
+    fout = open(dirName1 + '\Struct\\' + 'src.txt', 'w')
     fout.write(datetime.datetime.today().strftime("%d/%m/%Y:%H-%M-%S"))
     fout.close()
 
@@ -229,7 +231,8 @@ def TemplateDOCX():
 
 # main функция
 def accreditation():
-    dirName = 'O:\\БАЗА УП НА АККРЕДИТАЦИЮ/'
+    # dirName = 'O:\\БАЗА УП НА АККРЕДИТАЦИЮ/'
+    dirName = 'M:\\БАЗА ОПОП на 2019-2020 уч.г/'
     # dirName = 'D:\\up base'
     dirToPDF = 'D:\\up base PDF'
     SHENDOOD = 'D:\\SHENDOOD'
@@ -238,7 +241,7 @@ def accreditation():
     fileOutPDF = 'filePDF.txt'
 
     # Создать общий выходной файл
-    # compil_ot_file(dirName,fileOutAll)
+    compil_ot_file(dirName,fileOutAll)
     # TemplateDOCX()
     # Создать выходной файл для PDF директории
     # compil_ot_file(dirToPDF, fileOutPDF)
@@ -257,7 +260,7 @@ def accreditation():
     # copy_to_pdf(dirName,dirToPDF,'ШЦЭ')
 
     # обновление по запросу
-    updateQuest()
+    # updateQuest()
 
     # Копирует УПЫ И КУГИ с ДООД
     # copySHEN(dirName,SHENDOOD,'ШЕН')
