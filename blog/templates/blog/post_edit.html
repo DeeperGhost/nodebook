@@ -1,0 +1,10 @@
+{% extends 'blog/index.html' %}
+
+{% block content %}
+
+<form method="POST" class="post-form">{% csrf_token %}
+    <p>dfsdf<input type=number min="0" max="1000" step="1" value=5></p>
+    {{ form.as_p }}
+    <button type="submit" class="save btn btn-default">Save</button>
+</form>
+{% endblock %}

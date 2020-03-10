@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Создание сетки страницы</title>
+
+    <!--Шапка шрифт и css-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/structApp.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!--Таскательная хрень вариант первонайденый надо работать и переделать-->
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="{% static 'js/taskNode.js' %}"></script>
+
+
+    <link rel="stylesheet" href="{% static 'css/taskNode.css' %}">
+
+
+
+</head>
+<body>
+
+<header class = "header">
+    <div class="header-left">
+        <a href="/" class = "header-NB-nav">index</a></li>
+    </div>
+
+    <div class="header-center">
+        <a href="/list" class = "header-NB-nav">Список</a>
+        <a href="/base" class = "header-NB-nav">База</a>
+        <a href="/statistic" class = "header-NB-nav">Статистика</a>
+    </div>
+
+    <div class="header-right">
+        <a href="/login"class = "header-NB-nav" target="_blank">login</a>
+    </div>
+</header>
+
+
+<div class="column">
+    {% for key, value in data %}
+    <div class="portlet">
+        <div class="portlet-header">{{ value.Name }} </div>
+        <div class="portlet-content">
+            <ul> {{ value.Name }}
+                <li>>key = {{key}} </li>
+                <li>Caption = {{value.Caption}} </li>
+                <li>Dimension = {{value.Dimension}}</li>
+                <li>Name = {{value.Name}}</li>
+                <li>Section = {{value.Section}}</li>
+                <li>Value = <input type=number min="0" max="1000" step="1" value=5> {{value.Value}}</li>
+            </ul>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+
+<div class="column">
+    {% for key, value in dataTaskList %}
+    <div class="portlet">
+        <div class="portlet-header">{{ value.idDataProductBase }} </div>
+        <div class="portlet-content"> {{ value.DateAdd }} , {{value.Check}}, {{value.Value}}</div>
+
+    </div>
+    {% endfor %}
+</div>
+
+<div class="column">
+    <div class="portlet">
+        <div class="portlet-header">Links</div>
+        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+    </div>
+    <div class="portlet">
+        <div class="portlet-header">Images</div>
+        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!--Шапка шрифт и css-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/structApp.css' %}">
+
+
+    <!--Таскательная хрень вариант первонайденый надо работать и переделать-->
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="{% static 'js/taskNode.js' %}"></script>
+
+
+    <link rel="stylesheet" href="{% static 'css/taskNode.css' %}">
+
+    <title>List</title>
+</head>
+<body>
+
+<header class = "header">
+    <div class="header-left">
+        <a href="/" class = "header-NB-nav">index</a></li>
+    </div>
+
+    <div class="header-center">
+        <a href="/list" class = "header-NB-nav">Список</a>
+        <a href="/base" class = "header-NB-nav">База</a>
+        <a href="/statistic" class = "header-NB-nav">Статистика</a>
+    </div>
+
+    <div class="header-right">
+        <a href="/login"class = "header-NB-nav" target="_blank">login</a>
+    </div>
+</header>
+
+<!--Контент-->
+<p>asdfsdfsd</p>
+<!--<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>-->
+<a href="{% url 'post_new' %}"class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+<div class="row">
+    <div class="col-md-8">
+        {% block content %}
+        {% endblock %}
+    </div>
+</div>
+<h1><a href="/">Django Girls Blog</a></h1>
+<!--контент 2-->
+
+<div class="column">
+    <div class="portlet">
+        <div class="portlet-header">Feeds</div>
+        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+    </div>
+    <div class="portlet">
+        <div class="portlet-header">News</div>
+        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+
+
+
+    </div>
+
+    <div class="card">
+        <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Collapsible Group Item #1
+                </button>
+            </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="column">
+    <div class="portlet">
+        <div class="portlet-header">Shopping</div>
+        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+    </div>
+</div>
+
+<div class="column">
+    <div class="portlet">
+        <div class="portlet-header">Links</div>
+        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+    </div>
+    <div class="portlet">
+        <div class="portlet-header">Images</div>
+        <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>

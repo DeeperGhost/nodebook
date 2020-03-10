@@ -1,0 +1,85 @@
+
+
+  .tilt {
+    transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -webkit-transform: rotate(3deg);
+
+  }
+
+
+  .column {
+    min-width: 300px;
+    max-width: 300px;
+    position: relative;
+
+
+    float: left;
+    padding-bottom: 100px;
+    border : ridge;
+    height: 100%;
+    margin: 0 3px;
+    word-wrap: break-word;
+
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+
+
+    background : #dfe3e6
+
+
+  }
+  .portlet {
+
+    padding: 0em;
+
+
+    border-radius: 3px;
+  }
+  .portlet-header {
+    padding: 0.2em 0.3em;
+    margin-bottom: 0.1em;
+    position: relative;
+
+
+    background : #f5f6f7
+
+
+  }
+  .portlet-toggle {
+    position: absolute;
+    aria-expanded: false;
+    top: 40%;
+    right: 5%;
+    margin-top: -1px;
+    border : ridge;
+    width : 10px;
+    height : 10px;
+
+    border-radius: 20px;
+
+  }
+  .portlet-content {
+    padding: 0.1em;
+    border-radius: 8px;
+    background : #ffff9e
+
+
+  }
+  .portlet-placeholder {
+    border: 1px dotted black;
+    margin: 0 1em 1em 0;
+    height: 50px;
+
+
+  }
+  input[type=number] {
+
+    border: none;
+
+
+    background : #ffff9e
+  }
+
+

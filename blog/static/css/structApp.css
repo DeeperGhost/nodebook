@@ -1,0 +1,40 @@
+    .header{
+        background: #8B9F9E;
+        padding: 9px;
+        overflow: hidden;
+
+        /* Включаем режим Flexbox. */
+        display: flex;
+
+        /* Распределяем элементы внутри шапки */
+        justify-content: space-between;
+
+        /* Выравниваем элементы вертикально по центру. */
+        align-items: center;
+    }
+
+    .header-NB-nav{
+        background: hsla(0,0%,100%,.3);
+        overflow: hidden;
+        padding: 6px;
+        right: 0;
+        transition: .1s ease;
+        border-radius: 3px;
+        color: #001623;
+        font-family: 'Alegreya Sans SC', sans-serif;
+
+        font-weight: Bold;
+        font-style: normal;
+    }
+
+    a {
+        color: #001623;
+    }
+
+    body {
+        font-family: Helvetica;
+        background: #4bbf6b;
+        -webkit-font-smoothing: antialiased;
+    }
+
+

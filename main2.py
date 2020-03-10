@@ -9,6 +9,7 @@ import glob
 # from acreditationDooD import updateQuest
 
 from acreditationDooD import accreditation
+from acreditationDooD import accreditationCopy
 from acreditationDooD import dirFolder
 
 from madeRes import CatalogTovar
@@ -33,7 +34,7 @@ def main():
     # p.readCSV()
 
     # Акредитация
-    accreditation()
+    accreditationCopy()
     # dirFolder()
 
     # inter()

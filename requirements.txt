@@ -1,1 +1,8 @@
-pyrebase
+pyrebase==3.0.27
+django
+python-docx
+matplotlib
+scipy
+keras
+tensorflow
+pyPDF2

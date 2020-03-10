@@ -1,7 +1,11 @@
 .idea/*
 venv/*
 *.csv
+*.pyc
 *.xlsx
 *.jpg
 config.py
+db.sqlite3
 __pycache__/*
+logUpdate.txt
+*.docx
